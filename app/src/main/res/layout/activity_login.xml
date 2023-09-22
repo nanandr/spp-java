@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:text="SDQ Bina Mulya"
                     android:textColor="@color/white"
-                    android:textSize="32sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -76,7 +76,10 @@
                     android:id="@+id/et_username"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@drawable/border_gray"/>
+                    android:background="@drawable/border_gray"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="10dp"/>
 
             </LinearLayout>
 
@@ -116,6 +119,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/border_gray"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
                     android:padding="10dp"/>
 
             </LinearLayout>
@@ -126,6 +131,8 @@
                 android:layout_height="60dp"
                 android:text="Login"
                 android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/light_blue"/>
 
         </LinearLayout>

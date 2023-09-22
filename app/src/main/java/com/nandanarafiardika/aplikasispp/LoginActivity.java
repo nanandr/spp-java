@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_submit  = (Button) findViewById(R.id.btn_login_submit);
 
         btn_submit.setOnClickListener(view -> {
-            Intent i = new Intent(this, DashboardActivity.class);
+            Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
         });
     }

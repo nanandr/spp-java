@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
     android:orientation="vertical"
-    tools:context=".DashboardActivity">
+    tools:context=".DashboardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 android:layout_height="35dp"
                 android:src="@drawable/ic_search"
                 android:backgroundTint="#00FFFFFF"
-                app:tint="@color/white"/>
+                app:tint="@color/white" />
 
         </LinearLayout>
 
@@ -283,8 +283,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <include
-        layout="@layout/activity_main"/>
 
 </LinearLayout>
