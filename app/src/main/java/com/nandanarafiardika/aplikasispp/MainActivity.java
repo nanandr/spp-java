@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.akun:
                         setFragment(new AkunFragment());
+                        break;
                 }
                 return true;
             }
@@ -48,5 +50,19 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout,fragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+
+        if (count == 1) {
+            super.onBackPressed();
+        } else {
+            getSupportFragmentManager().popBackStack();
+            Toast.makeText(this, "Blum dihandle bang", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

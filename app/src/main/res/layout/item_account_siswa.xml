@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="12">
+
+            <TextView
+                android:id="@+id/tv_item_Nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvNama"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_NIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvNIS"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Jk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvJk"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Angkatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvAngkatan"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvKelas"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvTransaksi"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Spp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvSpp"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Diskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvDiskon"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_Hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvHp"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_CreatedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvCreatedAt"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tv_item_UpdatedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:text="tvUpdatedAt"
+                android:maxLines="1" />
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
