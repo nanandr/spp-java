@@ -7,7 +7,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @GET("restapi.php")
-    Call<AccountSiswaResponse> getSiswa(@Query("function") String function);
+
+    @GET("siswa")
+    Call<AccountSiswaResponse> getSiswa();
 
 }

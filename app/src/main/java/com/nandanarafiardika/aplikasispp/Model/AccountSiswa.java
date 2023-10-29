@@ -28,7 +28,7 @@ public class AccountSiswa {
         this.id = id;
     }
 
-    @SerializedName("nama")
+    @SerializedName("Nama")
     public String getNama() {
         return nama;
     }
@@ -37,7 +37,7 @@ public class AccountSiswa {
         this.nama = nama;
     }
 
-    @SerializedName("nis")
+    @SerializedName("NIS")
     public String getNis() {
         return nis;
     }
@@ -46,7 +46,7 @@ public class AccountSiswa {
         this.nis = nis;
     }
 
-    @SerializedName("jk")
+    @SerializedName("JK")
     public String getJk() {
         return jk;
     }
@@ -55,7 +55,7 @@ public class AccountSiswa {
         this.jk = jk;
     }
 
-    @SerializedName("angkatan")
+    @SerializedName("Angkatan")
     public String getAngkatan() {
         return angkatan;
     }
@@ -64,7 +64,7 @@ public class AccountSiswa {
         this.angkatan = angkatan;
     }
 
-    @SerializedName("kelas")
+    @SerializedName("Kelas")
     public String getKelas() {
         return kelas;
     }
@@ -100,7 +100,7 @@ public class AccountSiswa {
         this.diskon = diskon;
     }
 
-    @SerializedName("hp")
+    @SerializedName("Hp")
     public String getHp() {
         return hp;
     }
@@ -118,7 +118,7 @@ public class AccountSiswa {
         this.createdAt = createdAt;
     }
 
-    @SerializedName("updatedAt")
+    @SerializedName("Data dibuat")
     public String getUpdatedAt() {
         return updatedAt;
     }
@@ -127,7 +127,7 @@ public class AccountSiswa {
         this.updatedAt = updatedAt;
     }
 
-    @SerializedName("deletedAt")
+    @SerializedName("Data diubah")
     public String getDeletedAt() {
         return deletedAt;
     }

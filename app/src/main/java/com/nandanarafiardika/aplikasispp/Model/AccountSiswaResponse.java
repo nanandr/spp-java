@@ -5,7 +5,7 @@ import java.util.List;
 public class AccountSiswaResponse {
     private String status;
     private String message;
-    List<AccountSiswa> data;
+    List<AccountSiswa> siswa;
 
     public String getStatus() {
         return status;
@@ -24,10 +24,10 @@ public class AccountSiswaResponse {
     }
 
     public List<AccountSiswa> getData() {
-        return data;
+        return siswa;
     }
 
-    public void setData(List<AccountSiswa> data) {
-        this.data = data;
+    public void setData(List<AccountSiswa> siswa) {
+        this.siswa = siswa;
     }
 }

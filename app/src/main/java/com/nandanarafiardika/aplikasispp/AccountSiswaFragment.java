@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.nandanarafiardika.aplikasispp.Adapter.ListAccountSiswaAdapter;
 import com.nandanarafiardika.aplikasispp.Model.AccountSiswa;
@@ -49,7 +50,7 @@ public class AccountSiswaFragment extends Fragment {
     }
 
     public void data() {
-        Call<AccountSiswaResponse> AccountSiswaCall = mApiInterface.getSiswa("get_siswa");
+        Call<AccountSiswaResponse> AccountSiswaCall = mApiInterface.getSiswa();
         AccountSiswaCall.enqueue(new Callback<AccountSiswaResponse>() {
             @Override
             public void onResponse(Call<AccountSiswaResponse> call, Response<AccountSiswaResponse> response) {
