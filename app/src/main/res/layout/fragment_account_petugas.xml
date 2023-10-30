@@ -29,7 +29,7 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 android:layout_weight="1"
-                android:text="Akun Siswa"/>
+                android:text="Akun Petugas"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
                         android:textSize="18sp"
                         android:textStyle="normal"
                         android:textColor="@color/white"
-                        android:text="NIS"
+                        android:text="NIP"
                         android:maxLines="1" />
 
                     <TextView
@@ -131,78 +131,27 @@
                         android:text="Nama"
                         android:maxLines="1" />
 
-
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
-                        android:layout_weight="1.8"
+                        android:layout_weight="4"
                         android:textSize="18sp"
                         android:textStyle="normal"
                         android:textColor="@color/white"
-                        android:text="Jk"
+                        android:text="Alamat"
                         android:maxLines="1" />
-
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
-                        android:layout_weight="2"
+                        android:layout_weight="5"
                         android:textSize="18sp"
                         android:textStyle="normal"
                         android:textColor="@color/white"
-                        android:text="Angkatan"
+                        android:text="Email"
                         android:maxLines="1" />
-
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:layout_weight="1.7"
-                        android:textSize="18sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/white"
-                        android:text="Kelas"
-                        android:maxLines="1" />
-
-                    <!--Disabled-->
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:layout_weight="0"
-                        android:textSize="0sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/white"
-                        android:text="Transaksi"
-                        android:maxLines="1" />
-
-                    <!--Disabled-->
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:layout_weight="0"
-                        android:textSize="0sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/white"
-                        android:text="Spp"
-                        android:maxLines="1" />
-
-                    <!--Disabled-->
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:layout_weight="0"
-                        android:textSize="0sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/white"
-                        android:text="Diskon"
-                        android:maxLines="1" />
-
 
                     <TextView
                         android:layout_width="0dp"
@@ -215,7 +164,6 @@
                         android:text="Hp"
                         android:maxLines="1" />
 
-
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -226,7 +174,6 @@
                         android:textColor="@color/white"
                         android:text="CreatedAt"
                         android:maxLines="1" />
-
 
                     <TextView
                         android:layout_width="0dp"
@@ -242,10 +189,10 @@
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_account_siswa"
+                    android:id="@+id/rv_account_petugas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/item_account_siswa"/>
+                    tools:listitem="@layout/item_account_petugas"/>
 
             </LinearLayout>
 

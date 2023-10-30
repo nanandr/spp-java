@@ -25,9 +25,13 @@ public class AkunFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         LinearLayout btnSiswa = getView().findViewById(R.id.linear_siswa);
-
         btnSiswa.setOnClickListener(view1 -> {
             setFragment(new AccountSiswaFragment());
+        });
+
+        LinearLayout btnPetugas = getView().findViewById(R.id.linear_petugas);
+        btnPetugas.setOnClickListener(view1 -> {
+            setFragment(new AccountPetugasFragment());
         });
     }
 

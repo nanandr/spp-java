@@ -1,14 +1,15 @@
 package com.nandanarafiardika.aplikasispp.rest;
 
-import com.nandanarafiardika.aplikasispp.Model.AccountSiswaResponse;
+import com.nandanarafiardika.aplikasispp.Model.ServerResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 public interface ApiInterface {
 
     @GET("siswa")
-    Call<AccountSiswaResponse> getSiswa();
+    Call<ServerResponse> getSiswa();
 
+    @GET("petugas")
+    Call<ServerResponse> getPetugas();
 }

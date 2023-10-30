@@ -14,8 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nandanarafiardika.aplikasispp.Adapter.ListAccountSiswaAdapter;
-import com.nandanarafiardika.aplikasispp.Model.AccountSiswa;
+import com.nandanarafiardika.aplikasispp.Adapter.ListAccountPetugasAdapter;
+import com.nandanarafiardika.aplikasispp.Model.AccountPetugas;
 import com.nandanarafiardika.aplikasispp.Model.ServerResponse;
 import com.nandanarafiardika.aplikasispp.rest.ApiClient;
 import com.nandanarafiardika.aplikasispp.rest.ApiInterface;
@@ -24,23 +24,22 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
-public class AccountSiswaFragment extends Fragment {
+public class AccountPetugasFragment extends Fragment {
     ApiInterface mApiInterface;
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_account_siswa, container, false);
+        return inflater.inflate(R.layout.fragment_account_petugas, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.rv_account_siswa);
+        mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.rv_account_petugas);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
@@ -49,16 +48,16 @@ public class AccountSiswaFragment extends Fragment {
     }
 
     public void data() {
-        Call<ServerResponse> AccountSiswaCall = mApiInterface.getSiswa();
-        AccountSiswaCall.enqueue(new Callback<ServerResponse>() {
+        Call<ServerResponse> AccountPetugasCall = mApiInterface.getPetugas();
+        AccountPetugasCall.enqueue(new Callback<ServerResponse>() {
             @Override
-            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
-                List<AccountSiswa> AccountSiswaList = response.body().getSiswa();
-                Log.d("Retrofit Get", "Jumlah data Siswa: " + String.valueOf(AccountSiswaList.size()));
-                ListAccountSiswaAdapter listAccountSiswaAdapter = new ListAccountSiswaAdapter(AccountSiswaList);
-                mRecyclerView.setAdapter(listAccountSiswaAdapter);
+            public void onResponse(Call<ServerResponse> call, retrofit2.Response<ServerResponse> response) {
+                List<AccountPetugas> AccountPetugasList = response.body().getPetugas();
+                Log.d("Retrofit Get", "Jumlah data Petugas: " + String.valueOf(AccountPetugasList.size()));
+                ListAccountPetugasAdapter listAccountPetugasAdapter = new ListAccountPetugasAdapter(AccountPetugasList);
+                mRecyclerView.setAdapter(listAccountPetugasAdapter);
 //                //Onclick
-//                listAccountSiswaAdapter.setOnItemClickCallback(data -> showSelectedCoffeeDrink(data));
+//                listAccountPetugasAdapter.setOnItemClickCallback(data -> showSelectedCoffeeDrink(data));
             }
 
             @Override

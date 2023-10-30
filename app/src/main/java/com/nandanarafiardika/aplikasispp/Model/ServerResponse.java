@@ -2,18 +2,10 @@ package com.nandanarafiardika.aplikasispp.Model;
 
 import java.util.List;
 
-public class AccountSiswaResponse {
-    private String status;
+public class ServerResponse {
     private String message;
     List<AccountSiswa> siswa;
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+    List<AccountPetugas> petugas;
 
     public String getMessage() {
         return message;
@@ -23,11 +15,20 @@ public class AccountSiswaResponse {
         this.message = message;
     }
 
-    public List<AccountSiswa> getData() {
+    public List<AccountSiswa> getSiswa() {
         return siswa;
     }
 
-    public void setData(List<AccountSiswa> siswa) {
+    public void setSiswa(List<AccountSiswa> siswa) {
         this.siswa = siswa;
     }
+
+    public List<AccountPetugas> getPetugas() {
+        return petugas;
+    }
+
+    public void setPetugas(List<AccountPetugas> petugas) {
+        this.petugas = petugas;
+    }
+
 }
