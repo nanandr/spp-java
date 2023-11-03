@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.nandanarafiardika.aplikasispp.Model.AccountSiswa;
+import com.nandanarafiardika.aplikasispp.Model.Kelas;
 import com.nandanarafiardika.aplikasispp.R;
 
 import java.util.List;
@@ -36,17 +37,22 @@ public class ListAccountSiswaAdapter extends RecyclerView.Adapter<ListAccountSis
 
     @Override
     public void onBindViewHolder(@NonNull ListAccountSiswaAdapter.ListViewHolder holder, int position) {
-        holder.tvNama.setText(listSiswa.get(position).getNama());
-        holder.tvNIS.setText(listSiswa.get(position).getNis());
-        holder.tvJk.setText(listSiswa.get(position).getJk());
-        holder.tvAngkatan.setText(listSiswa.get(position).getAngkatan());
-        holder.tvKelas.setText(listSiswa.get(position).getKelas());
-        holder.tvTransaksi.setText(listSiswa.get(position).getTransaksi());
-        holder.tvSpp.setText(listSiswa.get(position).getSpp());
-        holder.tvDiskon.setText(listSiswa.get(position).getDiskon());
-        holder.tvHp.setText(listSiswa.get(position).getHp());
-        holder.tvCreatedAt.setText(listSiswa.get(position).getCreatedAt());
-        holder.tvUpdatedAt.setText(listSiswa.get(position).getUpdatedAt());
+        AccountSiswa siswa = listSiswa.get(position);
+        holder.tvNama.setText(siswa.getNama());
+        holder.tvNIS.setText(siswa.getNis());
+        holder.tvJk.setText(siswa.getJk());
+        holder.tvAngkatan.setText(String.valueOf(siswa.getAngkatan()));
+        holder.tvHp.setText(siswa.getHp());
+        holder.tvTransaksi.setText(siswa.getTransaksi());
+        holder.tvSpp.setText(siswa.getSpp());
+        holder.tvDiskon.setText(siswa.getDiskon());
+        holder.tvCreatedAt.setText(siswa.getCreatedAt());
+        holder.tvUpdatedAt.setText(siswa.getUpdatedAt());
+        List<Kelas> kelasList = siswa.getKelas();
+        if (kelasList != null && kelasList.size() > 0) {
+            Kelas kelas = kelasList.get(0);
+            holder.tvKelas.setText(kelas.getNamaKelas());
+        }
     }
 
     @Override

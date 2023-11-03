@@ -6,6 +6,7 @@ public class ServerResponse {
     private String message;
     List<AccountSiswa> siswa;
     List<AccountPetugas> petugas;
+    List<Pembayaran> transaksi;
 
     public String getMessage() {
         return message;
@@ -31,4 +32,11 @@ public class ServerResponse {
         this.petugas = petugas;
     }
 
+    public List<Pembayaran> getTransaksi() {
+        return transaksi;
+    }
+
+    public void setTransaksi(List<Pembayaran> transaksi) {
+        this.transaksi = transaksi;
+    }
 }

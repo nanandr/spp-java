@@ -3,14 +3,16 @@ package com.nandanarafiardika.aplikasispp.Model;
 import com.google.gson.annotations.SerializedName;
 
 import java.lang.String;
+import java.util.List;
 
 public class AccountSiswa {
     private String id;
     private String nama;
     private String nis;
+    private String alamat;
     private String jk;
     private String angkatan;
-    private String kelas;
+    private List<Kelas> kelas;
     private String transaksi;
     private String spp;
     private String diskon;
@@ -46,6 +48,14 @@ public class AccountSiswa {
         this.nis = nis;
     }
 
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
     @SerializedName("jk")
     public String getJk() {
         return jk;
@@ -65,11 +75,11 @@ public class AccountSiswa {
     }
 
     @SerializedName("kelas")
-    public String getKelas() {
+    public List<Kelas> getKelas() {
         return kelas;
     }
 
-    public void setKelas(String kelas) {
+    public void setKelas(List<Kelas> kelas) {
         this.kelas = kelas;
     }
 
@@ -136,7 +146,7 @@ public class AccountSiswa {
         this.deletedAt = deletedAt;
     }
 
-    public AccountSiswa(String id, String nama, String nis, String jk, String angkatan, String kelas, String transaksi, String spp, String diskon, String hp, String createdAt, String updatedAt, String deletedAt){
+    public AccountSiswa(String id, String nama, String nis, String jk, String angkatan, List<Kelas> kelas, String transaksi, String spp, String diskon, String hp, String createdAt, String updatedAt, String deletedAt){
         this.id = id;
         this.nama = nama;
         this.nis = nis;

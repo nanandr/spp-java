@@ -12,4 +12,7 @@ public interface ApiInterface {
 
     @GET("petugas")
     Call<ServerResponse> getPetugas();
+
+    @GET("pembayaran")
+    Call<ServerResponse> getPembayaran();
 }

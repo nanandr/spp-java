@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.nandanarafiardika.aplikasispp.Adapter.ListAccountSiswaAdapter;
 import com.nandanarafiardika.aplikasispp.Model.AccountSiswa;
+import com.nandanarafiardika.aplikasispp.Model.Kelas;
 import com.nandanarafiardika.aplikasispp.Model.ServerResponse;
 import com.nandanarafiardika.aplikasispp.rest.ApiClient;
 import com.nandanarafiardika.aplikasispp.rest.ApiInterface;
@@ -53,9 +54,27 @@ public class AccountSiswaFragment extends Fragment {
         AccountSiswaCall.enqueue(new Callback<ServerResponse>() {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
-                List<AccountSiswa> AccountSiswaList = response.body().getSiswa();
-                Log.d("Retrofit Get", "Jumlah data Siswa: " + String.valueOf(AccountSiswaList.size()));
-                ListAccountSiswaAdapter listAccountSiswaAdapter = new ListAccountSiswaAdapter(AccountSiswaList);
+                List<AccountSiswa> accountSiswaList = response.body().getSiswa();
+                Log.d("Retrofit Get", "Jumlah data Siswa: " + String.valueOf(accountSiswaList.size()));
+
+                for (AccountSiswa accountSiswa : accountSiswaList) {
+                    String nama = accountSiswa.getNama();
+                    String alamat = accountSiswa.getAlamat();
+                    String jenisKelamin = accountSiswa.getJk();
+                    String angkatan = accountSiswa.getAngkatan();
+                    String hp = accountSiswa.getHp();
+
+                    // Access the nested "kelas" object
+                    List<Kelas> kelasList = accountSiswa.getKelas();
+                    for (Kelas kelas : kelasList) {
+                        String namaKelas = kelas.getNamaKelas();
+                        String tahunAjar = kelas.getTahunAjar();
+
+                        // Now you can use namaKelas and tahunAjar as needed
+                    }
+                }
+
+                ListAccountSiswaAdapter listAccountSiswaAdapter = new ListAccountSiswaAdapter(accountSiswaList);
                 mRecyclerView.setAdapter(listAccountSiswaAdapter);
 //                //Onclick
 //                listAccountSiswaAdapter.setOnItemClickCallback(data -> showSelectedCoffeeDrink(data));

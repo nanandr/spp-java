@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="1300dp"
+    android:layout_width="750dp"
     android:layout_height="wrap_content"
     android:paddingVertical="10dp"
     android:stretchColumns="1"
@@ -11,97 +11,69 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv_item_NIP"
+            android:id="@+id/tv_item_NamaSiswa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:paddingRight="5dp"
             android:textColor="@color/white"
-            android:layout_weight="2.3"
+            android:layout_weight="2.5"
             android:textSize="16sp"
             android:textStyle="normal"
-            android:text="tvNIP"
+            android:text="tvNamaSiswa"
             android:maxLines="1" />
 
         <TextView
-            android:id="@+id/tv_item_Nama"
+            android:id="@+id/tv_item_NamaPetugas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:paddingRight="5dp"
             android:textColor="@color/white"
-            android:layout_weight="4"
+            android:layout_weight="2.5"
             android:textSize="16sp"
             android:textStyle="normal"
-            android:text="tvNama"
+            android:text="tvNamaPetugas"
             android:maxLines="1" />
 
         <TextView
-            android:id="@+id/tv_item_Alamat"
+            android:id="@+id/tv_item_TanggalBayar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:paddingRight="5dp"
             android:textColor="@color/white"
-            android:layout_weight="4"
+            android:layout_weight="2"
             android:textSize="16sp"
             android:textStyle="normal"
-            android:text="tvAlamat"
+            android:text="tvTanggalBayar"
             android:maxLines="1" />
 
         <TextView
-            android:id="@+id/tv_item_Email"
+            android:id="@+id/tv_item_TotalBayar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:paddingRight="5dp"
             android:textColor="@color/white"
-            android:layout_weight="5"
+            android:layout_weight="1.5"
             android:textSize="16sp"
             android:textStyle="normal"
-            android:text="tvEmail"
+            android:text="tvTotalBayar"
             android:maxLines="1" />
 
         <TextView
-            android:id="@+id/tv_item_Hp"
+            android:id="@+id/tv_item_Bulan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:paddingRight="5dp"
             android:textColor="@color/white"
-            android:layout_weight="3"
+            android:layout_weight="1.2"
             android:textSize="16sp"
             android:textStyle="normal"
-            android:text="tvHp"
+            android:text="tvBulan"
             android:maxLines="1" />
-
-        <TextView
-            android:id="@+id/tv_item_CreatedAt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:paddingRight="5dp"
-            android:textColor="@color/white"
-            android:layout_weight="4"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            android:text="tvCreatedAt"
-            android:maxLines="1" />
-
-
-        <TextView
-            android:id="@+id/tv_item_UpdatedAt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:paddingRight="5dp"
-            android:textColor="@color/white"
-            android:layout_weight="4"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            android:text="tvUpdatedAt"
-            android:maxLines="1" />
-
 
     </TableRow>
 
