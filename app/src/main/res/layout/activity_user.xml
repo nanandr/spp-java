@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:orientation="vertical"
+    tools:context=".UserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv_current_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:text="John Doe"/>
+
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_person"
+                android:backgroundTint="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/rounded"
+                android:backgroundTint="@color/gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border_white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/white"
+                        android:text="Bulan"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/white"
+                        android:text="Tanggal Bayar"
+                        android:maxLines="1" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:layout_weight="1.5"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/white"
+                        android:text="Total Bayar"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_account_pembayaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_tagihan"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

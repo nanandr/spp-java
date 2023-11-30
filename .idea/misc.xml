@@ -16,6 +16,7 @@
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/activity_navigation.xml" value="0.264" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/activity_pembayaran.xml" value="0.23072916666666668" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/activity_siswa_account.xml" value="0.23072916666666668" />
+        <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/activity_user.xml" value="0.264" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/fragment_account_petugas.xml" value="0.23072916666666668" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/fragment_account_siswa.xml" value="0.264" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/fragment_akun.xml" value="0.23072916666666668" />
@@ -25,6 +26,7 @@
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/item_account_petugas.xml" value="0.1" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/item_account_siswa.xml" value="0.1" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/item_pembayaran.xml" value="0.1" />
+        <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/layout/item_tagihan.xml" value="0.2296875" />
         <entry key="..\:/ProjectAndroid/spp-java/app/src/main/res/menu/navigation_item.xml" value="0.23072916666666668" />
       </map>
     </option>

@@ -18,8 +18,8 @@ import com.nandanarafiardika.aplikasispp.Adapter.ListAccountSiswaAdapter;
 import com.nandanarafiardika.aplikasispp.Model.AccountSiswa;
 import com.nandanarafiardika.aplikasispp.Model.Kelas;
 import com.nandanarafiardika.aplikasispp.Model.ServerResponse;
-import com.nandanarafiardika.aplikasispp.rest.ApiClient;
-import com.nandanarafiardika.aplikasispp.rest.ApiInterface;
+import com.nandanarafiardika.aplikasispp.Rest.ApiClient;
+import com.nandanarafiardika.aplikasispp.Rest.ApiInterface;
 
 import java.util.List;
 

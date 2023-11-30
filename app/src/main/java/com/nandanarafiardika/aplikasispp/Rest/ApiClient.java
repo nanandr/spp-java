@@ -1,4 +1,4 @@
-package com.nandanarafiardika.aplikasispp.rest;
+package com.nandanarafiardika.aplikasispp.Rest;
 
 import com.nandanarafiardika.aplikasispp.Config.Configuration;
 

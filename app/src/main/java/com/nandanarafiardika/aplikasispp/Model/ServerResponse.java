@@ -4,9 +4,18 @@ import java.util.List;
 
 public class ServerResponse {
     private String message;
-    List<AccountSiswa> siswa;
+    AccountSiswa siswa;
+    List<AccountSiswa> listSiswa;
     List<AccountPetugas> petugas;
     List<Pembayaran> transaksi;
+
+    public AccountSiswa getSiswaWithId() {
+        return siswa;
+    }
+
+    public void setSiswaWithId(AccountSiswa siswa) {
+        this.siswa = siswa;
+    }
 
     public String getMessage() {
         return message;
@@ -17,11 +26,11 @@ public class ServerResponse {
     }
 
     public List<AccountSiswa> getSiswa() {
-        return siswa;
+        return listSiswa;
     }
 
-    public void setSiswa(List<AccountSiswa> siswa) {
-        this.siswa = siswa;
+    public void setSiswa(List<AccountSiswa> listSiswa) {
+        this.listSiswa = listSiswa;
     }
 
     public List<AccountPetugas> getPetugas() {

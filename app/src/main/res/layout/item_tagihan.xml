@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:stretchColumns="1"
+    android:background="@drawable/border_white">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_item_Bulan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:text="tvBulan"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tv_item_TanggalBayar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:text="tvTanggalBayar"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tv_item_TotalBayar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:layout_weight="1.5"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:text="tvTotalBayar"
+            android:maxLines="1" />
+
+    </TableRow>
+
+</TableLayout>

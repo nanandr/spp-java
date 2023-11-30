@@ -17,8 +17,8 @@ import android.view.ViewGroup;
 import com.nandanarafiardika.aplikasispp.Adapter.ListAccountPetugasAdapter;
 import com.nandanarafiardika.aplikasispp.Model.AccountPetugas;
 import com.nandanarafiardika.aplikasispp.Model.ServerResponse;
-import com.nandanarafiardika.aplikasispp.rest.ApiClient;
-import com.nandanarafiardika.aplikasispp.rest.ApiInterface;
+import com.nandanarafiardika.aplikasispp.Rest.ApiClient;
+import com.nandanarafiardika.aplikasispp.Rest.ApiInterface;
 
 import java.util.List;
 
