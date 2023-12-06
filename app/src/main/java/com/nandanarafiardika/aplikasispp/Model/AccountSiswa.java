@@ -17,6 +17,8 @@ public class AccountSiswa {
     private String spp;
     private String diskon;
     private String hp;
+    private String password;
+    private String token;
     private String createdAt;
     private String updatedAt;
     private String deletedAt;
@@ -119,6 +121,22 @@ public class AccountSiswa {
         this.hp = hp;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     @SerializedName("createdAt")
     public String getCreatedAt() {
         return createdAt;
@@ -146,7 +164,7 @@ public class AccountSiswa {
         this.deletedAt = deletedAt;
     }
 
-    public AccountSiswa(String id, String nama, String nis, String jk, String angkatan, List<Kelas> kelas, String transaksi, String spp, String diskon, String hp, String createdAt, String updatedAt, String deletedAt){
+    public AccountSiswa(String id, String nama, String nis, String jk, String angkatan, List<Kelas> kelas, String transaksi, String spp, String diskon, String hp, String password, String token, String createdAt, String updatedAt, String deletedAt){
         this.id = id;
         this.nama = nama;
         this.nis = nis;
@@ -156,6 +174,8 @@ public class AccountSiswa {
         this.transaksi = transaksi;
         this.spp = spp;
         this.diskon = diskon;
+        this.password = password;
+        this.token = token;
         this.hp = hp;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;

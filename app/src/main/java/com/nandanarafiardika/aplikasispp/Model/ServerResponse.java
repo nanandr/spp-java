@@ -4,17 +4,26 @@ import java.util.List;
 
 public class ServerResponse {
     private String message;
-    AccountSiswa siswa;
+    AccountSiswa user;
     List<AccountSiswa> listSiswa;
     List<AccountPetugas> petugas;
     List<Pembayaran> transaksi;
+    UserPost userPost;
 
-    public AccountSiswa getSiswaWithId() {
-        return siswa;
+    public UserPost getUserPost() {
+        return userPost;
     }
 
-    public void setSiswaWithId(AccountSiswa siswa) {
-        this.siswa = siswa;
+    public void setUserPost(UserPost userPost) {
+        this.userPost = userPost;
+    }
+
+    public AccountSiswa getSiswaWithId() {
+        return user;
+    }
+
+    public void setSiswaWithId(AccountSiswa user) {
+        this.user = user;
     }
 
     public String getMessage() {
