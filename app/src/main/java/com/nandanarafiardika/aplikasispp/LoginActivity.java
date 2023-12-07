@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (response != null && response.isSuccessful()) {
                     if (response.body() != null) {
                         AccountSiswa accountSiswa = response.body().getSiswaWithId();
-                        Toast.makeText(LoginActivity.this, accountSiswa.getNama(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(LoginActivity.this, accountSiswa.getToken(), Toast.LENGTH_SHORT).show();
                         authManager.saveAccessToken(accountSiswa.getToken());
                         Intent i = new Intent(LoginActivity.this, UserActivity.class);
                         startActivity(i);

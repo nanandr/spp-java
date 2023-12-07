@@ -6,8 +6,10 @@ import com.nandanarafiardika.aplikasispp.Model.ServerResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiInterface {
 
@@ -17,7 +19,10 @@ public interface ApiInterface {
     @GET("siswa/{id}")
     Call<ServerResponse> getSiswaWithId(@Path("id") String id);
 
-    @POST("/auth/login/siswa")
+    @GET("pembayaran/siswa")
+    Call<ServerResponse> getSiswaWithToken(@Header("Authorization") String accessToken, @Query("tahun") String tahun );
+
+    @POST("auth/login/siswa")
     Call<ServerResponse> loginSiswa(@Body UserPost userPost);
 
     @GET("petugas")

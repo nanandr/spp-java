@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 public class AuthManager {
     private static final String SHARED_PREFS = "MyPrefs";
     //
-    private static final String KEY_ACCESS_TOKEN = "id";
+    private static final String KEY_ACCESS_TOKEN = "token";
 
     private final SharedPreferences sharedPreferences;
 

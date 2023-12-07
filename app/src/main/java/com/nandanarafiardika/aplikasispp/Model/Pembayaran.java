@@ -1,5 +1,7 @@
 package com.nandanarafiardika.aplikasispp.Model;
 
+import java.util.List;
+
 public class Pembayaran {
     private String id;
     private String namaSiswa;
@@ -7,6 +9,8 @@ public class Pembayaran {
     private String tanggalBayar;
     private String totalBayar;
     private String bulan;
+    private Spp spp;
+    private List<Kelas> kelas;
     private String createdAt;
     private String updatedAt;
 
@@ -74,7 +78,23 @@ public class Pembayaran {
         this.updatedAt = updatedAt;
     }
 
-    public Pembayaran(String id,String namaSiswa ,String namaPetugas ,String tanggalBayar ,String totalBayar ,String bulan ,String createdAt ,String updatedAt) {
+    public Spp getSpp() {
+        return spp;
+    }
+
+    public void setSpp(Spp spp) {
+        this.spp = spp;
+    }
+
+    public List<Kelas> getKelas() {
+        return kelas;
+    }
+
+    public void setKelas(List<Kelas> kelas) {
+        this.kelas = kelas;
+    }
+
+    public Pembayaran(String id, String namaSiswa , String namaPetugas , String tanggalBayar , String totalBayar , String bulan , String createdAt , String updatedAt, Spp spp, List<Kelas> kelas) {
         this.id = id;
         this.namaSiswa = namaSiswa;
         this.namaPetugas = namaPetugas;
@@ -83,5 +103,7 @@ public class Pembayaran {
         this.bulan = bulan;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.spp = spp;
+        this.kelas = kelas;
     }
 }
