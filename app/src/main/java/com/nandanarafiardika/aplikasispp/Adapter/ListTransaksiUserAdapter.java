@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nandanarafiardika.aplikasispp.Model.Pembayaran;
+import com.nandanarafiardika.aplikasispp.Model.Transaksi;
 import com.nandanarafiardika.aplikasispp.R;
 
 import java.text.NumberFormat;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class ListTransaksiUserAdapter extends RecyclerView.Adapter<ListTransaksiUserAdapter.ListViewHolder> {
-    List<Pembayaran> listTransaksi;
+    List<Transaksi> listTransaksi;
 
     private ListTransaksiUserAdapter.OnItemClickCallback onItemClickCallback;
 
@@ -24,7 +25,7 @@ public class ListTransaksiUserAdapter extends RecyclerView.Adapter<ListTransaksi
         this.onItemClickCallback = onItemClickCallback;
     }
 
-    public ListTransaksiUserAdapter(List<Pembayaran> listTransaksi) {
+    public ListTransaksiUserAdapter(List<Transaksi> listTransaksi) {
         this.listTransaksi = listTransaksi;
     }
 
@@ -37,9 +38,9 @@ public class ListTransaksiUserAdapter extends RecyclerView.Adapter<ListTransaksi
 
     @Override
     public void onBindViewHolder(@NonNull ListTransaksiUserAdapter.ListViewHolder holder, int position) {
-        Pembayaran pembayaran = listTransaksi.get(position);
+        Transaksi pembayaran = listTransaksi.get(position);
         holder.tvBulan.setText(pembayaran.getBulan());
-        holder.tvTanggalBayar.setText(pembayaran.getTanggalBayar());
+        holder.tvTanggalBayar.setText(pembayaran.getTanggalBayar() != null ? pembayaran.getTanggalBayar() : "");
         int totalBayar = Integer.parseInt(pembayaran.getTotalBayar());
         String formattedTotalBayar = formatRupiah(totalBayar);
         holder.tvTotalBayar.setText(formattedTotalBayar);

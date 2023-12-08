@@ -26,6 +26,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_submit;
     ApiInterface apiInterface;
     AuthManager authManager;
+    private long backPressedTime;
+    private Toast backToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,5 +90,18 @@ public class LoginActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(getBaseContext(), "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }
